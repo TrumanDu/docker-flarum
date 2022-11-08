@@ -5,21 +5,21 @@
 :warning: Backup your database, config.php, composer.lock and assets folder  
 :warning: Disable all 3rd party extensions prior to upgrading in panel admin.
 
-1 - Update your docker-compose file, see an example [here](https://github.com/mondediefr/docker-flarum/tree/master#2---docker-composeyml)
+1 - Update your docker-compose file, see an example [here](https://github.com/jeromegillard/docker-flarum/tree/master#2---docker-composeyml)
 
 ```yml
 version: "3"
 
 services:
   flarum:
-    image: mondedie/flarum:1.3.0
+    image: jeromegillard/flarum:1.5.0
     ...
 ```
 
 2 - Pull the last docker images
 
 ```sh
-docker pull mondedie/flarum:1.2.0
+docker pull mondedie/flarum:1.5.0
 docker-compose stop flarum
 docker-compose rm flarum
 docker-compose up -d flarum
@@ -39,7 +39,7 @@ After that your upgrade is finish. :tada: :tada:
 :warning: Backup your database, config.php, composer.lock and assets folder  
 :warning: Disable all 3rd party extensions prior to upgrading in panel admin.
 
-1 - Update your docker-compose file, see an example [here](https://github.com/mondediefr/docker-flarum/tree/master#2---docker-composeyml)
+1 - Update your docker-compose file, see an example [here](https://github.com/jeromegillard/docker-flarum/tree/master#2---docker-composeyml)
 
 ```yml
 version: "3"

@@ -1,17 +1,11 @@
-# mondedie/flarum
+# jeromegillard/flarum
 
 ![logo](https://i.imgur.com/Bjrtbsc.png)
 
-[![](https://github.com/mondediefr/docker-flarum/workflows/build/badge.svg)](https://github.com/mondediefr/docker-flarum/actions)
-[![](https://img.shields.io/docker/pulls/mondedie/flarum)](https://hub.docker.com/r/mondedie/flarum)
-[![](https://img.shields.io/docker/stars/mondedie/flarum)](https://hub.docker.com/r/mondedie/flarum)
+[![](https://github.com/jeromegillard/docker-flarum/workflows/build/badge.svg)](https://github.com/jeromegillard/docker-flarum/actions)
+[![](https://img.shields.io/docker/pulls/jeromegillard/flarum)](https://hub.docker.com/r/jeromegillard/flarum)
+[![](https://img.shields.io/docker/stars/jeromegillard/flarum)](https://hub.docker.com/r/jeromegillard/flarum)
 
-### Tag available
-
- - **latest** [(Dockerfile)](https://github.com/mondediefr/docker-flarum/blob/master/Dockerfile)
- - **stable** [(Dockerfile)](https://github.com/mondediefr/docker-flarum/blob/master/Dockerfile)
- - **1.0.2** [(Dockerfile)](https://github.com/mondediefr/docker-flarum/blob/1.0.2/Dockerfile)
- - **1.2.0** [(Dockerfile)](https://github.com/mondediefr/docker-flarum/blob/1.2.0/Dockerfile)
 
 ### Features
 
@@ -19,13 +13,13 @@
 - Lightweight & secure image
 - Based on Alpine Linux 3.16
 - **nginx** and **PHP 8.0**
-- Latest [Flarum Framework](https://github.com/flarum/framework) (v1.3.0)
+- Latest [Flarum Framework](https://github.com/flarum/framework) (v1.5.0)
 - MySQL/Mariadb driver
 - OPCache extension configured
 
 ### Build-time variables
 
-- **VERSION** = Version of [flarum/flarum](https://github.com/flarum/flarum) skeleton (default: *v1.3.0*)
+- **VERSION** = Version of [flarum/flarum](https://github.com/flarum/flarum) skeleton (default: *v1.5.0*)
 
 ### Ports
 
@@ -75,10 +69,10 @@
 
 ```bash
 # Pull from hub.docker.com :
-docker pull mondedie/flarum:latest
+docker pull jeromegillard/flarum:latest
 
 # or build it manually :
-docker build -t mondedie/flarum:latest https://github.com/mondediefr/docker-flarum.git
+docker build -t jeromegillard/flarum:latest https://github.com/jeromegillard/docker-flarum.git
 ```
 
 #### 2 - Docker-compose.yml
@@ -88,7 +82,7 @@ version: "3"
 
 services:
   flarum:
-    image: mondedie/flarum:stable
+    image: jeromegillard/flarum:latest
     container_name: flarum
     env_file:
       - /mnt/docker/flarum/flarum.env
@@ -118,7 +112,7 @@ services:
 
 You need a reverse proxy to access flarum, this is not described here. You can use the solution of your choice (Traefik, Nginx, Apache, Haproxy, Caddy, H2O...etc).
 
-Create a environment file (see docker-compose: /mnt/docker/flarum/flarum.env [here](https://github.com/mondediefr/docker-flarum/tree/master#2---docker-composeyml))
+Create a environment file
 
 ```
 # vi /mnt/docker/flarum/flarum.env
@@ -162,7 +156,7 @@ version: "3"
 
 services:
   flarum:
-    image: mondedie/flarum:stable
+    image: jeromegillard/flarum:latest
     container_name: flarum
     environment:
       - PHP_EXTENSIONS=gmp session brotli
@@ -246,8 +240,10 @@ https://getcomposer.org/doc/03-cli.md#modifying-repositories
 
 ### Guide for upgrade your flarum container
 
-See the instructions [here](https://github.com/mondediefr/docker-flarum/blob/master/UPGRADE.md)
+See the instructions [here](https://github.com/jeromegillard/docker-flarum/blob/master/UPGRADE.md)
 
 ## License
 
-Docker image [mondedie/flarum](https://hub.docker.com/r/mondedie/flarum) is released under [MIT License](https://github.com/mondediefr/docker-flarum/blob/master/LICENSE).
+Docker image [jeromegillard/flarum](https://hub.docker.com/r/jeromegillard/flarum:) is released under [MIT License](https://github.com/jeromegillard/docker-flarum/blob/master/LICENSE).
+
+Docker image [mondedie/flarum](https://hub.docker.com/r/mondedie/flarum) is released under [MIT License](https://github.com/jeromegillard/docker-flarum/blob/master/LICENSE).
