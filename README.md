@@ -1,7 +1,5 @@
 # jeromegillard/flarum
 
-![logo](https://i.imgur.com/Bjrtbsc.png)
-
 [![](https://github.com/jeromegillard/docker-flarum/workflows/build/badge.svg)](https://github.com/jeromegillard/docker-flarum/actions)
 [![](https://img.shields.io/docker/pulls/jeromegillard/flarum)](https://hub.docker.com/r/jeromegillard/flarum)
 [![](https://img.shields.io/docker/stars/jeromegillard/flarum)](https://hub.docker.com/r/jeromegillard/flarum)
@@ -172,7 +170,7 @@ You can find a php extension here https://pkgs.alpinelinux.org/packages?name=php
 
 ### Install custom extensions
 
-**Flarum extensions list :** https://flagrow.io/extensions
+**Flarum extensions list :** https://extiverse.com/
 
 #### Install an extension
 
@@ -247,3 +245,5 @@ See the instructions [here](https://github.com/jeromegillard/docker-flarum/blob/
 Docker image [jeromegillard/flarum](https://hub.docker.com/r/jeromegillard/flarum:) is released under [MIT License](https://github.com/jeromegillard/docker-flarum/blob/master/LICENSE).
 
 Docker image [mondedie/flarum](https://hub.docker.com/r/mondedie/flarum) is released under [MIT License](https://github.com/jeromegillard/docker-flarum/blob/master/LICENSE).
+
+The embedded [Flarum software](https://github.com/flarum/) is released under [MIT License](https://github.com/flarum/flarum/blob/master/LICENSE).
