@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.16
 
 LABEL description="Simple forum software for building great communities" \
       maintainer="Jérôme Gillard"
