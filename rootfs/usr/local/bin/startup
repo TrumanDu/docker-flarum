@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # Required env variables
 if [ -z "${DB_PASS}" ]; then
