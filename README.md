@@ -8,7 +8,7 @@
 - Lightweight & secure image
 - Based on Alpine Linux 3.16
 - **nginx** and **PHP 8.0**
-- Latest [Flarum Framework](https://github.com/flarum/framework) (v1.6.0)
+- Latest [Flarum Framework](https://github.com/flarum/framework) (v1.6.2)
 - MySQL/Mariadb driver
 - OPCache extension configured
 
