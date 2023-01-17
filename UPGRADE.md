@@ -12,7 +12,7 @@ version: "3"
 
 services:
   flarum:
-    image: jeromegillard/flarum:1.6.0
+    image: jeromegillard/flarum:1.6
     container_name: flarum
     ...
 ```
@@ -26,6 +26,7 @@ docker-compose up -d flarum
 3 - Updating your database and removing old assets & extensions
 
 ```sh
+docker exec -ti flarum /bin/sh -c "cd /flarum/app && composer update --prefer-dist --no-dev -a -W"
 docker exec -ti flarum php /flarum/app/flarum migrate
 docker exec -ti flarum php /flarum/app/flarum cache:clear
 ```
