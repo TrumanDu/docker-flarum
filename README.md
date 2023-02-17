@@ -68,6 +68,9 @@ docker pull jeromegillard/flarum:latest
 
 # or build it manually :
 docker build -t jeromegillard/flarum:latest https://github.com/jeromegillard/docker-flarum.git
+
+# or build it manually with multi-arch support:
+docker buildx build --push --platform linux/amd64,linux/arm64,linux/arm/v7 --tag jeromegillard/flarum:latest --tag jeromegillard/flarum:1.6.3 --tag jeromegillard/flarum:1.6 https://github.com/jeromegillard/docker-flarum.git
 ```
 
 #### 2 - Docker-compose.yml
