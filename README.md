@@ -106,7 +106,7 @@ services:
     volumes:
       - /mnt/docker/mysql/db:/var/lib/mysql
     healthcheck:
-      test: ["CMD-SHELL", "mysqladmin -u $$MYSQL_USER -p$$MYSQL_PASSWORD ping -h localhost || exit 1"]
+      test: ["CMD-SHELL", "mysql -u $$MYSQL_USER -p$$MYSQL_PASSWORD -e 'SELECT 1;'"]
       start_period: 10s
       interval: 2s
       timeout: 5s
