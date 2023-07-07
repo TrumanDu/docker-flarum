@@ -12,7 +12,7 @@ version: "3"
 
 services:
   flarum:
-    image: jeromegillard/flarum:1.6
+    image: jeromegillard/flarum:1.8
     container_name: flarum
     ...
 ```
@@ -20,7 +20,8 @@ services:
 2 - Pull the last docker images
 
 ```sh
-docker-compose up -d flarum
+docker compose pull
+docker compose up -d flarum
 ```
 
 3 - Updating your database and removing old assets & extensions
