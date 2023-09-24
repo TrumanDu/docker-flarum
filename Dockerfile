@@ -3,7 +3,7 @@ FROM alpine:3.16
 LABEL description="Simple forum software for building great communities" \
       maintainer="Jérôme Gillard"
 
-ARG VERSION=v1.8.0
+ARG VERSION=v1.8.2
 
 ENV GID=991 \
     UID=991 \
@@ -63,6 +63,6 @@ RUN apk add --no-progress --no-cache \
   && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx
 
 COPY rootfs /
-RUN chmod +x /usr/local/bin/* /etc/s6.d/*/run /etc/s6.d/.s6-svscan/*
+RUN chmod +x /usr/local/bin/* /etc/s6.d/*/run /etc/s6.d/.s6-svscan/* /flarum/app/*.sh
 VOLUME /etc/nginx/flarum /flarum/app/extensions /flarum/app/public/assets /flarum/app/storage/logs
 CMD ["/usr/local/bin/startup"]
