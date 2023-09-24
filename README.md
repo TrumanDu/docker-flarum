@@ -93,7 +93,8 @@ services:
     ports:
       - 80:8888
     depends_on:
-      - mariadb
+      mariadb:
+        condition: service_healthy
 
   mariadb:
     image: mariadb:10.5
@@ -105,6 +106,12 @@ services:
       - MYSQL_PASSWORD=xxxxxxxxxx
     volumes:
       - /mnt/docker/mysql/db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysql -u $$MYSQL_USER -p$$MYSQL_PASSWORD -e 'SELECT 1;'"]
+      start_period: 10s
+      interval: 2s
+      timeout: 5s
+      retries: 20
 ```
 
 #### 3 - Run it
