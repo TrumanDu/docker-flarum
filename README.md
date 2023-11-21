@@ -9,13 +9,13 @@
 - Lightweight & secure image
 - Based on Alpine Linux 3.16
 - **nginx** and **PHP 8.0**
-- Latest [Flarum Framework](https://github.com/flarum/framework) (v1.8.2)
+- Latest [Flarum Framework](https://github.com/flarum/framework) (v1.8.3)
 - MySQL/Mariadb driver
 - OPCache extension configured
 
 ### Build-time variables
 
-- **VERSION** = Version of [flarum/flarum](https://github.com/flarum/flarum) skeleton (default: *v1.8.2*)
+- **VERSION** = Version of [flarum/flarum](https://github.com/flarum/flarum) skeleton (default: *v1.8.3*)
 
 ### Ports
 
@@ -71,7 +71,7 @@ docker pull jeromegillard/flarum:latest
 docker build -t jeromegillard/flarum:latest https://github.com/jeromegillard/docker-flarum.git
 
 # or build it manually with multi-arch support, and push it to your DockerHub account:
-docker buildx build --push --platform linux/amd64,linux/arm64,linux/arm/v7 --tag jeromegillard/flarum:latest --tag jeromegillard/flarum:1.8.2 --tag jeromegillard/flarum:1.8 https://github.com/jeromegillard/docker-flarum.git
+docker buildx build --push --platform linux/amd64,linux/arm64,linux/arm/v7 --tag jeromegillard/flarum:latest --tag jeromegillard/flarum:1.8.3 --tag jeromegillard/flarum:1.8 https://github.com/jeromegillard/docker-flarum.git
 ```
 
 #### 2 - Docker-compose.yml

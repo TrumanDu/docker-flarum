@@ -3,7 +3,7 @@ FROM alpine:3.16
 LABEL description="Simple forum software for building great communities" \
       maintainer="Jérôme Gillard"
 
-ARG VERSION=v1.8.2
+ARG VERSION=v1.8.3
 
 ENV GID=991 \
     UID=991 \
@@ -57,7 +57,7 @@ RUN apk add --no-progress --no-cache \
   && sed -i 's/memory_limit = .*/memory_limit = ${PHP_MEMORY_LIMIT}/' /etc/php8/php.ini \
   && chmod +x /usr/local/bin/composer \
   && mkdir -p /run/php /flarum/app \
-  && COMPOSER_CACHE_DIR="/tmp" composer create-project flarum/flarum:$VERSION /flarum/app \
+  && COMPOSER_CACHE_DIR="/tmp" COMPOSER_ROOT_VERSION="${VERSION}" composer create-project flarum/flarum /flarum/app \
   && composer clear-cache \
   && rm -rf /flarum/.composer /tmp/* \
   && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx
