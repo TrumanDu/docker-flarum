@@ -3,7 +3,7 @@ FROM alpine:3.16
 LABEL description="Simple forum software for building great communities" \
       maintainer="Jérôme Gillard"
 
-ARG VERSION=v1.8.4
+ARG VERSION=v1.8.9
 
 ENV GID=991 \
     UID=991 \
