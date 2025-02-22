@@ -22,6 +22,13 @@ package="${2}"
 su-exec "${UID}:${GID}" mkdir -p "${CACHE_DIR}"
 su-exec "${UID}:${GID}" touch "${LIST_FILE}"
 
+# set composer registry
+if [ -n "${COMPOSER_REGISTRY}" ]; then
+  composer config -g secure-http false
+  composer config -g repo.packagist composer ${COMPOSER_REGISTRY}
+  echo "[INFO] set composer registry"
+fi
+
 case "${action}" in
   # Install a flarum extension
   "require")
