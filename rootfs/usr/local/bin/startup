@@ -49,6 +49,13 @@ fi
 
 cd /flarum/app
 
+# set composer registry
+if [ -n "${COMPOSER_REGISTRY}" ]; then
+  composer config -g secure-http false
+  composer config -g repo.packagist composer ${COMPOSER_REGISTRY}
+  echo "[INFO] set composer registry"
+fi
+
 # Add github token authentication (eg. for privates extensions)
 if [ "${GITHUB_TOKEN_AUTH}" != false ]; then
   echo "[INFO] Adding github token authentication"
